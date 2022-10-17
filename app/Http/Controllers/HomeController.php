@@ -20,6 +20,8 @@ class HomeController extends Controller
 {
 
     public function index() {
+
+        // dd('test');
         $sales = Sale::completed()->sum('total_amount');
         $sale_returns = SaleReturn::completed()->sum('total_amount');
         $purchase_returns = PurchaseReturn::completed()->sum('total_amount');
